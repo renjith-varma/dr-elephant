@@ -19,9 +19,12 @@ import Dependencies._
 
 name := "dr-elephant"
 
-version := "2.0.13"
+version := "2.1.7"
 
 organization := "com.linkedin.drelephant"
+
+// Enable CPD SBT plugin
+lazy val root = (project in file(".")).enablePlugins(CopyPasteDetector)
 
 javacOptions in Compile ++= Seq("-source", "1.6", "-target", "1.6")
 
